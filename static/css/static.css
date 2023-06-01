@@ -1,0 +1,22 @@
+.form-group {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#map-div {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#dynamic-map-div {
+  height: 100%;
+}
+
+#dynamic-map {
+  width: 100%;
+  height: 100%;
+}

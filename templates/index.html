@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/static.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coordinate ploting</title>
+  </head>
+  <body>
+    <div class="min-vh-100">
+      <div
+        class="container-xxl d-flex flex-column justify-content-center gap-5 mb-4"
+      >
+        <div>
+          <!-- ------- Map -------- -->
+          <div class="container-xxl">
+            <div class="container pt-5">
+              <div class="row gy-5" style="margin-bottom: 2rem">
+                <div class="w-100 d-flex justify-content-center">
+                  <h2>Static Ploting</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div id="spinner" class="col-md-9 ld-over">
+                <div
+                  class="ld ld-ring ld-spin"
+                  style="font-size: 3rem; color: rgb(200, 200, 200)"
+                ></div>
+                <div id="map-div">
+                  <iframe
+                    id="map"
+                    src="/templates/coordinates.html"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+              </div>
+              <div class="col-md-3" style="margin-top: 0.5rem">
+                <div class="deviceSelect">
+                  <h6 style="text-align: center">Select Device ID</h6>
+                  <select class="form-select" id="deviceIDDropdown">
+                    <option value="">123456</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="from_date">Date From:</label>
+                  <input type="date" id="from_date" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="to_date">Date To:</label>
+                  <input type="date" id="to_date" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ------- Map -------- -->
+          <!-- ------- Dynamic Map -------- -->
+          <div class="container-xxl">
+            <div class="container pt-5">
+              <div class="row gy-5" style="margin-bottom: 2rem">
+                <div class="w-100 d-flex justify-content-center">
+                  <h2>Dynamic Ploting</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div id="dynamic-spinner" class="col-md-9 ld-over">
+                <div
+                  class="ld ld-ring ld-spin"
+                  style="font-size: 3rem; color: rgb(200, 200, 200)"
+                ></div>
+                <div id="dynamic-map-div">
+                  <iframe
+                    id="dynamic-map"
+                    src="/templates/coordinates.html"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+              </div>
+              <div class="col-md-3" style="margin-top: 0.5rem">
+                <div class="deviceSelect">
+                  <h6 style="text-align: center">Select Device ID</h6>
+                  <select class="form-select" id="dynamicDeviceIDDropdown">
+                    <option value="">123456</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="from_date">Date From:</label>
+                  <input
+                    type="date"
+                    id="dynamic_from_date"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="to_date">Date To:</label>
+                  <input
+                    type="date"
+                    id="dynamic_to_date"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ------- Dynamic Map -------- -->
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/index.js"></script>
+  </body>
+</html>
