@@ -51,6 +51,59 @@
         class="container-xxl d-flex flex-column justify-content-center gap-5 mb-4"
       >
         <div>
+          <!-- ------- Dynamic Map -------- -->
+          <div class="container-xxl">
+            <div class="container pt-5">
+              <div class="row gy-5" style="margin-bottom: 2rem">
+                <div class="w-100 d-flex justify-content-center">
+                  <h2>Dynamic Ploting</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9 ld-over">
+                <div id="map-container">
+                  <div id="dynamic-map-div"></div>
+                </div>
+              </div>
+              <div class="col-md-3" style="margin-top: 0.5rem">
+                <h4 style="text-align: center">Filter</h4>
+                <div class="form-group">
+                  <label for="dynamicDeviceIDDropdown">Select Device ID:</label>
+                  <select
+                    class="form-select font-size"
+                    id="dynamicDeviceIDDropdown"
+                  >
+                    {% for id in device_ids %}
+                    <option value="{{ id }}">{{ id }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="from_date">Date From:</label>
+                  <input
+                    type="date"
+                    min="2021-01-01"
+                    value="2021-01-01"
+                    id="dynamic_from_date"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <button
+                    class="btn btn-primary ld-ext-right"
+                    id="dynamic-plot-btn"
+                  >
+                    Start
+                    <div class="ld ld-ring ld-spin"></div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ------- Dynamic Map -------- -->
           <!-- ------- Map -------- -->
           <div class="container-xxl">
             <div class="container pt-5">
@@ -110,60 +163,6 @@
             </div>
           </div>
           <!-- ------- Map -------- -->
-          <!-- ------- Dynamic Map -------- -->
-          <div class="container-xxl">
-            <div class="container pt-5">
-              <div class="row gy-5" style="margin-bottom: 2rem">
-                <div class="w-100 d-flex justify-content-center">
-                  <h2>Dynamic Ploting</h2>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div id="map-container" class="col-md-9 ld-over">
-                <!-- <div
-                  class="ld ld-ring ld-spin"
-                  style="font-size: 3rem; color: rgb(200, 200, 200)"
-                ></div> -->
-                <div id="dynamic-map-div"></div>
-              </div>
-              <div class="col-md-3" style="margin-top: 0.5rem">
-                <h4 style="text-align: center">Filter</h4>
-                <div class="form-group">
-                  <label for="dynamicDeviceIDDropdown">Select Device ID:</label>
-                  <select
-                    class="form-select font-size"
-                    id="dynamicDeviceIDDropdown"
-                  >
-                    {% for id in device_ids %}
-                    <option value="{{ id }}">{{ id }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="from_date">Date From:</label>
-                  <input
-                    type="date"
-                    min="2021-01-01"
-                    value="2021-01-01"
-                    id="dynamic_from_date"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group">
-                  <button
-                    class="btn btn-primary ld-ext-right"
-                    id="dynamic-plot-btn"
-                  >
-                    Start
-                    <div class="ld ld-ring ld-spin"></div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ------- Dynamic Map -------- -->
         </div>
       </div>
     </div>

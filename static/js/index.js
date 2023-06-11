@@ -48,6 +48,22 @@ document
 // Dynamic Plot
 let processing = false;
 
+const distributeProperty = (n) => {
+  const minValue = 0.1;
+  const maxValue = 1;
+  const step = (maxValue - minValue) / (n - 1);
+
+  const array = [];
+  let value = minValue;
+
+  for (let i = 0; i < n; i++) {
+    array.push(value);
+    value += step;
+  }
+
+  return array;
+};
+
 const startProcessing = async () => {
   processing = !processing; // toggle processing
 
@@ -117,37 +133,50 @@ const startProcessing = async () => {
             }
           ).addTo(map);
           // Create markers
-          const markers = [];
-          coordinates.forEach((coordinate) => {
-            // Use algorithm to blur effectively
-            let circleMarker = L.circleMarker(coordinate, {
-              bubblingMouseEvents: true,
-              color: "red",
-              dashArray: null,
-              dashOffset: null,
-              fill: true,
-              fillColor: "red",
-              fillOpacity: 1,
-              fillRule: "evenodd",
-              lineCap: "round",
-              lineJoin: "round",
-              opacity: 1.0,
-              radius: 0.1,
-              stroke: true,
-              weight: 1,
-            });
-            markers.push(circleMarker);
-          });
+          let count = 1;
+          let markers = []; // old markers to be removed
           let bounds = new L.LatLngBounds();
           let i = 0;
           const addCoordinate = () => {
             setTimeout(() => {
-              map.addLayer(markers[i]);
+              // remove old markers
+              for (const marker of markers) {
+                marker.remove();
+              }
+              let newMarkers = []; // new markers to be added
+              // calculate opacity and add new markers
+              const opacities = count === 1 ? [1] : distributeProperty(count);
+              for (let j = 0; j < opacities.length; j++) {
+                let circleMarker = L.circleMarker(coordinates[j], {
+                  bubblingMouseEvents: true,
+                  color: "red",
+                  dashArray: null,
+                  dashOffset: null,
+                  fill: true,
+                  fillColor: "red",
+                  fillOpacity: opacities[j],
+                  fillRule: "evenodd",
+                  lineCap: "round",
+                  lineJoin: "round",
+                  opacity: opacities[j],
+                  radius: 2.5,
+                  stroke: true,
+                  weight: 0.5,
+                });
+                newMarkers.push(circleMarker);
+              }
+              for (const marker of newMarkers) {
+                map.addLayer(marker);
+              }
+              markers = newMarkers;
+              count++;
+
+              // map.addLayer(markers[i]);
               // auto adjust bounds
-              bounds.extend(markers[i].getLatLng());
+              bounds.extend(newMarkers[newMarkers.length - 1].getLatLng());
               map.fitBounds(bounds);
               i++;
-              if (processing && i < markers.length) {
+              if (processing && i < coordinates.length) {
                 addCoordinate();
               } else {
                 stopProcessing();
