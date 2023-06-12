@@ -149,9 +149,9 @@ const startProcessing = async () => {
                   lineCap: "round",
                   lineJoin: "round",
                   opacity: opacities[j],
-                  radius: 2.5,
+                  radius: 0.25,
                   stroke: true,
-                  weight: 0.5,
+                  weight: 1,
                 });
                 newMarkers.push(circleMarker);
               }
