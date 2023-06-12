@@ -45,6 +45,45 @@
     <title>Coordinate ploting</title>
   </head>
   <body>
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Coordinate Plotting</a>
+
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Dynamic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Static</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Toasts -->
+    <div
+      class="position-absolute top-0 end-0 toast-container"
+      style="padding-top: 5rem"
+    >
+      <div
+        class="align-items-center text-white bg-danger border-0 toast"
+        id="show-toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">OTP Resent. Check your inbox.</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <!-- Toasts -->
+
     <div class="min-vh-100">
       <div
         style="padding-bottom: 5rem"
@@ -52,7 +91,7 @@
       >
         <div>
           <!-- ------- Dynamic Map -------- -->
-          <div class="container-xxl">
+          <div class="container-xxl" id="dynamic">
             <div class="container pt-5">
               <div class="row gy-5" style="margin-bottom: 2rem">
                 <div class="w-100 d-flex justify-content-center">
@@ -69,19 +108,29 @@
               <div class="col-md-3" style="margin-top: 0.5rem">
                 <h4 style="text-align: center">Filter</h4>
                 <div class="form-group">
-                  <label for="dynamicDeviceIDDropdown">Select Device ID:</label>
+                  <label for="dynamicUserIDDropdown">Select User ID:</label>
                   <select
                     class="form-select font-size"
-                    id="dynamicDeviceIDDropdown"
+                    id="dynamicUserIDDropdown"
                   >
-                    {% for id in device_ids %}
+                    {% for id in user_ids %}
                     <option value="{{ id }}">{{ id }}</option>
                     {% endfor %}
                   </select>
                 </div>
 
                 <div class="form-group">
-                  <label for="from_date">Date From:</label>
+                  <label for="dynamicDeviceIDDropdown">Select Device ID:</label>
+                  <select
+                    class="form-select font-size"
+                    id="dynamicDeviceIDDropdown"
+                  >
+                    <option value="">Select User ID</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="dynamic_from_date">Date From:</label>
                   <input
                     type="date"
                     min="2021-01-01"
@@ -89,6 +138,28 @@
                     id="dynamic_from_date"
                     class="form-control"
                   />
+                </div>
+
+                <div class="form-group">
+                  <label for="dynamic_to_date">Date To:</label>
+                  <input
+                    type="date"
+                    min="2021-01-02"
+                    value="2021-01-02"
+                    id="dynamic_to_date"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="dynamic_speed">Speed:</label>
+                  <select class="form-select font-size" id="dynamic_speed">
+                    <option value="45">45</option>
+                    <option value="30">30</option>
+                    <option value="20">20</option>
+                    <option value="15">15</option>
+                    <option value="5">5</option>
+                  </select>
                 </div>
 
                 <div class="form-group">
@@ -105,7 +176,7 @@
           </div>
           <!-- ------- Dynamic Map -------- -->
           <!-- ------- Map -------- -->
-          <div class="container-xxl">
+          <div class="container-xxl" id="static" hidden>
             <div class="container pt-5">
               <div class="row gy-5" style="margin-bottom: 2rem">
                 <div class="w-100 d-flex justify-content-center">
@@ -126,11 +197,18 @@
               <div class="col-md-3" style="margin-top: 0.5rem">
                 <h4 style="text-align: center">Filter</h4>
                 <div class="form-group">
-                  <label for="deviceIDDropdown">Select Device ID:</label>
-                  <select class="form-select font-size" id="deviceIDDropdown">
-                    {% for id in device_ids %}
+                  <label for="userIDDropdown">Select User ID:</label>
+                  <select class="form-select font-size" id="userIDDropdown">
+                    {% for id in user_ids %}
                     <option value="{{ id }}">{{ id }}</option>
                     {% endfor %}
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="deviceIDDropdown">Select Device ID:</label>
+                  <select class="form-select font-size" id="deviceIDDropdown">
+                    <option value="">Select User ID</option>
                   </select>
                 </div>
 
@@ -149,11 +227,23 @@
                   <input
                     type="date"
                     id="to_date"
-                    min="2021-01-01"
-                    value="2021-01-01"
+                    min="2021-01-02"
+                    value="2021-01-02"
                     class="form-control"
                   />
                 </div>
+
+                <div class="form-group">
+                  <label for="speed">Speed:</label>
+                  <select class="form-select font-size" id="speed">
+                    <option value="45">45</option>
+                    <option value="30">30</option>
+                    <option value="20">20</option>
+                    <option value="15">15</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+
                 <div class="form-group">
                   <button class="btn btn-primary" id="static-plot-btn">
                     Plot
@@ -171,5 +261,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dynamic.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/static.js') }}"></script>
   </body>
 </html>

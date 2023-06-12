@@ -13,8 +13,19 @@ data = pd.read_parquet("sum2021B_MAP.parquet")
 
 @app.get("/")
 def index():
-    device_ids = list(set(data["device_id"]))
-    return render_template("index.html", device_ids=device_ids)
+    user_ids = list(set(data["user_id"]))
+    user_ids = [id_ for id_ in user_ids if id_]
+
+    return render_template("index.html", user_ids=user_ids)
+
+
+@app.get("/get-devices")
+def get_devices():
+    user_id = request.args.get("user_id")
+    filtered_data = data[data["user_id"] == user_id]
+    device_ids = filtered_data["device_id"]
+
+    return jsonify(devices=list(set(device_ids)))
 
 
 @app.post("/static-plot")
@@ -22,7 +33,9 @@ def static_plot():
     print("Started processing")
     try:
         get_data = request.get_json()
+        user_id = get_data["userID"]
         device_id = get_data["deviceID"]
+        speed = get_data["speed"]
         from_time = datetime.strptime(get_data["fromTime"], "%Y-%m-%d").strftime(
             "%Y-%m-%d %H:%M:%S.%f"
         )
@@ -32,9 +45,11 @@ def static_plot():
 
         # Apply filters
         filtered_data = data[
-            (data["device_id"] == int(device_id))
+            (data["user_id"] == user_id)
+            & (data["device_id"] == int(device_id))
             & (data["created"] >= from_time)
             & (data["created"] <= to_time)
+            & (data["speed"] <= int(speed))
         ]
 
         # Extract latitude and longitude columns
@@ -92,14 +107,23 @@ def dynamic_plot():
     print("Started processing")
     try:
         get_data = request.get_json()
+        user_id = get_data["userID"]
         device_id = get_data["deviceID"]
+        speed = get_data["speed"]
         from_time = datetime.strptime(get_data["fromTime"], "%Y-%m-%d").strftime(
+            "%Y-%m-%d %H:%M:%S.%f"
+        )
+        to_time = datetime.strptime(get_data["toTime"], "%Y-%m-%d").strftime(
             "%Y-%m-%d %H:%M:%S.%f"
         )
 
         # Apply filters
         filtered_data = data[
-            (data["device_id"] == int(device_id)) & (data["created"] >= from_time)
+            (data["user_id"] == user_id)
+            & (data["device_id"] == int(device_id))
+            & (data["created"] >= from_time)
+            & (data["created"] <= to_time)
+            & (data["speed"] <= int(speed))
         ]
 
         # Extract latitude and longitude columns
