@@ -66,6 +66,7 @@ const startProcessing = async () => {
     loader.classList.add("ld", "ld-ring", "ld-spin");
     startBtn.appendChild(loader);
     // Get coordinates
+    const plantName = document.getElementById("dynamicPlantName").value;
     const userID = document.getElementById("dynamicUserIDDropdown").value;
     const deviceID = document.getElementById("dynamicDeviceIDDropdown").value;
     const dateFrom = document.getElementById("dynamic_from_date").value;
@@ -73,6 +74,7 @@ const startProcessing = async () => {
     const speed = document.getElementById("dynamic_speed").value;
 
     const data = {
+      plantName: plantName,
       userID: userID,
       deviceID: deviceID,
       fromTime: dateFrom,
@@ -91,6 +93,7 @@ const startProcessing = async () => {
       if (data.success) {
         try {
           const coordinates = data.coordinates;
+          const geoJSON = data.geojson ? data.geojson : null;
           // Destroy and create new map div
           const mapContainer = document.getElementById("map-container");
           const mapDiv = document.getElementById("dynamic-map-div");
@@ -106,6 +109,7 @@ const startProcessing = async () => {
             zoomControl: true,
             preferCanvas: false,
           });
+          geoJSON && geoJSON.forEach((json) => L.geoJSON(json).addTo(map));
 
           const titleLayer = L.tileLayer(
             "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -149,9 +153,9 @@ const startProcessing = async () => {
                   lineCap: "round",
                   lineJoin: "round",
                   opacity: opacities[j],
-                  radius: 0.25,
+                  radius: 0.5,
                   stroke: true,
-                  weight: 1,
+                  weight: 2,
                 });
                 newMarkers.push(circleMarker);
               }

@@ -1,4 +1,5 @@
 sum2021B_MAP.parquet
+tbl__geofence.csv
 env
 __pycache__
 venv

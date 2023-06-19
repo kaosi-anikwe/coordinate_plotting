@@ -33,6 +33,7 @@ window.addEventListener("load", async () => {
 const staticPlot = async () => {
   const spinner = document.getElementById("spinner");
   spinner.classList.add("running");
+  const plantName = document.getElementById("plantName").value;
   const userID = document.getElementById("userIDDropdown").value;
   const deviceID = document.getElementById("deviceIDDropdown").value;
   const dateFrom = document.getElementById("from_date").value;
@@ -40,6 +41,7 @@ const staticPlot = async () => {
   const speed = document.getElementById("speed").value;
 
   const data = {
+    plantName: plantName,
     userID: userID,
     deviceID: deviceID,
     fromTime: dateFrom,
