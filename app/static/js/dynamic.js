@@ -181,7 +181,7 @@ const startProcessing = async () => {
                   opacity: opacities[j],
                   radius: 0.5,
                   stroke: true,
-                  weight: 10,
+                  weight: 7.5,
                 });
                 newMarkers.push(circleMarker);
               }

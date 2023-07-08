@@ -36,6 +36,8 @@ def create_app() -> Flask:
     app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("FLASK_DATABASE_URI")
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
+    db.init_app(app)
+    
     from .main import main
 
     app.register_blueprint(main)

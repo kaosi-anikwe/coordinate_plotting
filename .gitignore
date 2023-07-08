@@ -5,3 +5,4 @@ __pycache__
 venv
 .env
 app/static/static-coordinates.html
+database.db
