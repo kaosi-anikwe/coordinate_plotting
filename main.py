@@ -126,9 +126,13 @@ def get_users():
     plant_name = data["plantName"]
     print(plant_name)
     # get geojson
-    user_ids = list(USERS[plant_name])
-
+    try:
+        user_ids = list(USERS[plant_name])
+    except KeyError:
+        user_ids = []
+    
     return jsonify(users=user_ids)
+
 
 
 @app.post("/static-plot")
