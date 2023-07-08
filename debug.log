@@ -1,0 +1,337 @@
+nohup: ignoring input
+ * Serving Flask app 'main'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.91.52:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 144-608-610
+197.210.78.194 - - [04/Jul/2023 06:06:21] "GET / HTTP/1.1" 200 -
+197.210.79.108 - - [04/Jul/2023 06:06:21] "GET /static/css/loading.css HTTP/1.1" 304 -
+197.210.85.224 - - [04/Jul/2023 06:06:21] "GET /static/css/index.css HTTP/1.1" 304 -
+197.210.78.129 - - [04/Jul/2023 06:06:21] "GET /static/placeholder.html HTTP/1.1" 304 -
+197.210.79.108 - - [04/Jul/2023 06:06:21] "GET /static/js/index.js HTTP/1.1" 304 -
+197.210.78.129 - - [04/Jul/2023 06:06:21] "GET /static/js/dynamic.js HTTP/1.1" 200 -
+197.210.84.43 - - [04/Jul/2023 06:06:21] "GET /static/js/static.js HTTP/1.1" 304 -
+LGR FacilityLGR Facility
+
+197.210.84.43 - - [04/Jul/2023 06:07:01] "POST /get-users HTTP/1.1" 200 -
+197.210.84.43 - - [04/Jul/2023 06:07:01] "POST /get-users HTTP/1.1" 200 -
+197.210.85.224 - - [04/Jul/2023 06:08:17] "GET / HTTP/1.1" 200 -
+MAP & HR Facility (> 25mph)
+197.210.84.43 - - [04/Jul/2023 06:10:31] "POST /get-users HTTP/1.1" 200 -
+Michigan
+197.210.85.224 - - [04/Jul/2023 06:13:41] "POST /get-users HTTP/1.1" 200 -
+197.210.78.194 - - [04/Jul/2023 06:13:47] "POST /static-plot HTTP/1.1" 200 -
+197.210.85.82 - - [04/Jul/2023 06:14:20] "GET / HTTP/1.1" 200 -
+197.210.78.129 - - [04/Jul/2023 06:14:32] "GET /static/css/index.css HTTP/1.1" 304 -
+197.210.79.108 - - [04/Jul/2023 06:14:45] "GET /static/css/loading.css HTTP/1.1" 304 -
+197.210.84.43 - - [04/Jul/2023 06:14:56] "GET /static/js/index.js HTTP/1.1" 304 -
+197.210.78.194 - - [04/Jul/2023 06:15:04] "GET /static/placeholder.html HTTP/1.1" 304 -
+197.210.79.108 - - [04/Jul/2023 06:15:05] "GET /static/js/static.js HTTP/1.1" 304 -
+197.210.85.82 - - [04/Jul/2023 06:15:05] "GET /static/js/dynamic.js HTTP/1.1" 304 -
+197.210.79.108 - - [04/Jul/2023 06:15:35] "POST /static-plot HTTP/1.1" 200 -
+nohup: ignoring input
+nohup: failed to run command 'python': No such file or directory
+nohup: ignoring input
+ * Serving Flask app 'main'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.91.52:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 140-847-084
+127.0.0.1 - - [04/Jul/2023 15:00:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jul/2023 15:03:53] "GET / HTTP/1.1" 200 -
+102.88.63.141 - - [04/Jul/2023 15:06:16] "GET / HTTP/1.1" 200 -
+102.88.35.69 - - [04/Jul/2023 15:06:17] "GET /static/css/index.css HTTP/1.1" 200 -
+102.88.35.69 - - [04/Jul/2023 15:06:17] "GET /static/css/loading.css HTTP/1.1" 200 -
+102.88.62.25 - - [04/Jul/2023 15:06:17] "GET /static/placeholder.html HTTP/1.1" 200 -
+102.88.63.141 - - [04/Jul/2023 15:06:17] "GET /static/js/index.js HTTP/1.1" 200 -
+102.88.34.142 - - [04/Jul/2023 15:06:17] "GET /static/js/dynamic.js HTTP/1.1" 200 -
+102.88.62.25 - - [04/Jul/2023 15:06:17] "GET /static/js/static.js HTTP/1.1" 200 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+102.88.34.142 - - [04/Jul/2023 15:06:22] "GET /favicon.ico HTTP/1.1" 404 -
+102.88.35.69 - - [04/Jul/2023 15:06:43] "GET / HTTP/1.1" 200 -
+102.88.63.57 - - [04/Jul/2023 15:07:02] "GET / HTTP/1.1" 200 -
+102.88.63.116 - - [04/Jul/2023 15:07:02] "GET /static/css/index.css HTTP/1.1" 304 -
+102.88.63.57 - - [04/Jul/2023 15:07:02] "GET /static/css/loading.css HTTP/1.1" 304 -
+102.88.62.25 - - [04/Jul/2023 15:07:02] "GET /static/placeholder.html HTTP/1.1" 304 -
+102.88.62.25 - - [04/Jul/2023 15:07:02] "GET /static/js/index.js HTTP/1.1" 304 -
+102.88.63.141 - - [04/Jul/2023 15:07:03] "GET /static/js/static.js HTTP/1.1" 304 -
+102.88.63.57 - - [04/Jul/2023 15:07:03] "GET /static/js/dynamic.js HTTP/1.1" 304 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+99.232.129.146 - - [04/Jul/2023 15:07:09] "GET / HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:07:10] "GET /static/css/index.css HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:07:10] "GET /static/js/static.js HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:07:10] "GET /static/css/loading.css HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:07:10] "GET /static/js/dynamic.js HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:07:10] "GET /static/js/index.js HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:07:10] "GET /static/placeholder.html HTTP/1.1" 200 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+99.232.129.146 - - [04/Jul/2023 15:07:11] "GET /favicon.ico HTTP/1.1" 404 -
+OHAP Operating Boundaries Geo-Fence
+OHAP  Facility 25 MPH
+Michigan
+OHAP  Facility 25 MPH
+99.232.129.146 - - [04/Jul/2023 15:08:14] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:09:43] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:09:54] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:10:10] "POST /get-users HTTP/1.1" 200 -
+FCA Brampton
+FCA Brampton
+FCA SHAP
+99.232.129.146 - - [04/Jul/2023 15:15:57] "POST /get-users HTTP/1.1" 200 -
+OHAP  Facility 25 MPH
+102.88.35.69 - - [04/Jul/2023 15:17:03] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:17:05] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:17:09] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:17:22] "GET / HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:17:23] "GET /static/css/loading.css HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 15:17:23] "GET /static/css/index.css HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 15:17:23] "GET /static/placeholder.html HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 15:17:23] "GET /static/js/index.js HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 15:17:23] "GET /static/js/dynamic.js HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 15:17:23] "GET /static/js/static.js HTTP/1.1" 304 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+MAP & HR Facility (> 25mph)
+102.88.35.69 - - [04/Jul/2023 15:18:48] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:19:03] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:20:35] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:20:55] "POST /get-users HTTP/1.1" 200 -
+102.88.35.69 - - [04/Jul/2023 15:20:57] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:21:02] "POST /get-users HTTP/1.1" 200 -
+102.88.35.69 - - [04/Jul/2023 15:21:08] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:23:25] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 15:23:27] "POST /get-users HTTP/1.1" 200 -
+162.216.150.11 - - [04/Jul/2023 17:37:23] code 400, message Bad request version ('À(À$À\x14À')
+162.216.150.11 - - [04/Jul/2023 17:37:23] "\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x8cìÔK\x04<Éj#Â+Sÿz<]\x83FE\x85=3#yöf3¬êß_\x9c\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À" HTTPStatus.BAD_REQUEST -
+MAP & HR Facility (> 25mph)
+MAP & HR Facility (> 25mph)
+102.88.34.7 - - [04/Jul/2023 18:07:56] "POST /get-users HTTP/1.1" 200 -
+102.88.63.200 - - [04/Jul/2023 18:08:16] "POST /get-users HTTP/1.1" 200 -
+102.88.34.7 - - [04/Jul/2023 19:14:18] "POST /static-plot HTTP/1.1" 200 -
+102.88.62.25 - - [04/Jul/2023 19:14:18] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+102.88.34.7 - - [04/Jul/2023 19:14:36] "POST /dynamic-plot HTTP/1.1" 200 -
+102.88.63.57 - - [04/Jul/2023 19:15:37] "POST /dynamic-plot HTTP/1.1" 200 -
+102.88.62.25 - - [04/Jul/2023 19:16:02] "POST /dynamic-plot HTTP/1.1" 200 -
+167.94.138.35 - - [04/Jul/2023 20:30:12] code 400, message Bad request version ('À\x14À')
+167.94.138.35 - - [04/Jul/2023 20:30:12] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x038Ê\x98\x91oå²\x86\x88&Õ\x86+Ðß$µ³XÛËü!×Û¡\x04\x80¾\x93£d A)É|\x08\x8e¯/Ã\x0bEuô\x1c\x1eqõ×»¼\x9bß{\x0cºK\x01Ê\x9beºè\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" HTTPStatus.BAD_REQUEST -
+167.94.138.35 - - [04/Jul/2023 20:30:13] "GET / HTTP/1.1" 200 -
+167.94.138.35 - - [04/Jul/2023 20:30:14] "GET / HTTP/1.1" 200 -
+167.94.138.35 - - [04/Jul/2023 20:30:14] code 505, message Invalid HTTP version (2.0)
+167.94.138.35 - - [04/Jul/2023 20:30:14] "PRI * HTTP/2.0" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+167.94.138.35 - - [04/Jul/2023 20:30:14] "GET /favicon.ico HTTP/1.1" 404 -
+99.232.129.146 - - [04/Jul/2023 20:46:22] "GET / HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:46:22] "GET /static/css/index.css HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:46:22] "GET /static/css/loading.css HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:46:22] "GET /static/placeholder.html HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:46:22] "GET /static/js/index.js HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:46:22] "GET /static/js/dynamic.js HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:46:22] "GET /static/js/static.js HTTP/1.1" 304 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+99.232.129.146 - - [04/Jul/2023 20:46:24] "GET /favicon.ico HTTP/1.1" 404 -
+FCA SHAP
+FCA SHAP Public Road
+FCA SHAP
+MAP & HR Facility (> 25mph)
+99.232.129.146 - - [04/Jul/2023 20:48:02] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:48:06] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:48:14] "POST /get-users HTTP/1.1" 200 -
+LGR Facility
+Flint Facility
+99.232.129.146 - - [04/Jul/2023 20:49:27] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:49:40] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:51:50] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:52:22] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:52:31] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:53:37] "GET / HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:53:37] "GET /static/css/index.css HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:53:37] "GET /static/css/loading.css HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:53:37] "GET /static/placeholder.html HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:53:37] "GET /static/js/index.js HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:53:37] "GET /static/js/dynamic.js HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 20:53:37] "GET /static/js/static.js HTTP/1.1" 304 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+99.232.129.146 - - [04/Jul/2023 20:54:24] "GET / HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:54:26] "GET /static/placeholder.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:54:26] "GET /static/js/dynamic.js HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:54:26] "GET /static/css/loading.css HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:54:26] "GET /static/css/index.css HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:54:26] "GET /static/js/static.js HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 20:54:26] "GET /static/js/index.js HTTP/1.1" 200 -
+Flint Exclusion Zones
+Flint Exclusion Zones99.232.129.146 - - [04/Jul/2023 20:54:28] "
+GET /favicon.ico HTTP/1.1" 404 -
+LGR Facility
+96.127.240.5 - - [04/Jul/2023 20:54:41] "GET / HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 20:54:42] "GET /static/js/static.js HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 20:54:42] "GET /static/js/dynamic.js HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 20:54:42] "GET /static/css/index.css HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 20:54:42] "GET /static/css/loading.css HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 20:54:42] "GET /static/placeholder.html HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 20:54:42] "GET /static/js/index.js HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 20:54:42] "GET / HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 20:54:42] "GET /static/css/index.css HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 20:54:42] "GET /static/placeholder.html HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 20:54:42] "GET /static/js/static.js HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 20:54:43] "GET /static/css/loading.css HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 20:54:43] "GET /static/js/dynamic.js HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 20:54:43] "GET /static/js/index.js HTTP/1.1" 200 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+Flint Exclusion Zones
+Flint Exclusion Zones
+MAP & HR Facility (> 25mph)
+LGR Facility
+FCA SHAP
+Flint Exclusion Zones
+Flint Exclusion Zones
+Flint Exclusion Zones
+99.232.129.146 - - [04/Jul/2023 20:57:29] "POST /get-users HTTP/1.1" 200 -
+Flint Facility
+197.210.78.160 - - [04/Jul/2023 20:58:24] "GET / HTTP/1.1" 200 -
+197.210.79.21 - - [04/Jul/2023 20:58:25] "GET /static/css/loading.css HTTP/1.1" 200 -
+197.210.85.170 - - [04/Jul/2023 20:58:25] "GET /static/css/index.css HTTP/1.1" 200 -
+197.210.85.44 - - [04/Jul/2023 20:58:25] "GET /static/js/dynamic.js HTTP/1.1" 200 -
+197.210.78.160 - - [04/Jul/2023 20:58:25] "GET /static/placeholder.html HTTP/1.1" 200 -
+197.210.85.44 - - [04/Jul/2023 20:58:25] "GET /static/js/index.js HTTP/1.1" 200 -
+197.210.78.160 - - [04/Jul/2023 20:58:25] "GET /static/js/static.js HTTP/1.1" 200 -
+Flint Exclusion ZonesFlint Exclusion Zones
+
+197.210.84.26 - - [04/Jul/2023 20:58:28] "GET /favicon.ico HTTP/1.1" 404 -
+99.232.129.146 - - [04/Jul/2023 20:59:56] "POST /get-users HTTP/1.1" 200 -
+Flint Exclusion Zones
+99.232.129.146 - - [04/Jul/2023 21:00:01] "POST /get-users HTTP/1.1" 200 -
+FCA SHAP
+99.232.129.146 - - [04/Jul/2023 21:00:32] "POST /get-users HTTP/1.1" 200 -
+Michigan
+197.210.84.26 - - [04/Jul/2023 21:01:16] "GET / HTTP/1.1" 200 -
+197.210.79.21 - - [04/Jul/2023 21:01:17] "GET /static/placeholder.html HTTP/1.1" 304 -
+197.210.85.136 - - [04/Jul/2023 21:01:17] "GET /static/css/index.css HTTP/1.1" 304 -
+197.210.79.183 - - [04/Jul/2023 21:01:17] "GET /static/css/loading.css HTTP/1.1" 304 -
+197.210.85.44 - - [04/Jul/2023 21:01:18] "GET /static/js/dynamic.js HTTP/1.1" 304 -
+197.210.79.21 - - [04/Jul/2023 21:01:18] "GET /static/js/index.js HTTP/1.1" 304 -
+197.210.84.26 - - [04/Jul/2023 21:01:18] "GET /static/js/static.js HTTP/1.1" 304 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+99.232.129.146 - - [04/Jul/2023 21:01:27] "POST /get-users HTTP/1.1" 200 -
+OHAP  Facility 25 MPH
+99.232.129.146 - - [04/Jul/2023 21:04:32] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:04:35] "POST /dynamic-plot HTTP/1.1" 200 -
+LGR Facility
+99.232.129.146 - - [04/Jul/2023 21:06:09] "POST /get-users HTTP/1.1" 200 -
+Flint Facility
+99.232.129.146 - - [04/Jul/2023 21:09:12] "POST /get-users HTTP/1.1" 200 -
+OHAP Facility 15MPH
+99.232.129.146 - - [04/Jul/2023 21:14:00] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:14:02] "POST /dynamic-plot HTTP/1.1" 200 -
+Flint I69 66mph
+99.232.129.146 - - [04/Jul/2023 21:17:53] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:18:15] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:18:23] "POST /get-users HTTP/1.1" 200 -
+Flint Exclusion Zones
+99.232.129.146 - - [04/Jul/2023 21:21:27] "POST /get-users HTTP/1.1" 200 -
+MAP & HR Facility (> 25mph)
+99.232.129.146 - - [04/Jul/2023 21:25:44] "POST /get-users HTTP/1.1" 200 -
+LGR Facility
+99.232.129.146 - - [04/Jul/2023 21:25:47] "POST /get-users HTTP/1.1" 200 -
+FCA SHAP Public Road
+66.187.114.70 - - [04/Jul/2023 21:26:07] "POST /get-users HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 21:26:31] "POST /get-users HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 21:26:42] "POST /get-users HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 21:26:47] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:27:43] "POST /get-users HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 21:27:57] "POST /get-users HTTP/1.1" 200 -
+66.187.114.70 - - [04/Jul/2023 21:28:19] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:28:51] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:28:51] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:28:53] "POST /get-users HTTP/1.1" 200 -
+96.127.240.5 - - [04/Jul/2023 21:28:56] "POST /get-users HTTP/1.1" 200 -
+197.210.79.21 - - [04/Jul/2023 21:29:20] "POST /get-users HTTP/1.1" 200 -
+197.210.85.44 - - [04/Jul/2023 21:29:23] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:29:45] "POST /get-users HTTP/1.1" 200 -
+197.210.85.44 - - [04/Jul/2023 21:29:49] "POST /get-users HTTP/1.1" 200 -
+197.210.79.183 - - [04/Jul/2023 21:30:00] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:30:36] "POST /get-users HTTP/1.1" 200 -
+197.210.79.21 - - [04/Jul/2023 21:32:57] "GET / HTTP/1.1" 200 -
+197.210.85.57 - - [04/Jul/2023 21:33:07] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+197.210.85.57 - - [04/Jul/2023 21:33:28] "GET /static/css/index.css HTTP/1.1" 200 -
+197.210.85.57 - - [04/Jul/2023 21:33:29] "GET /static/css/loading.css HTTP/1.1" 200 -
+197.210.78.160 - - [04/Jul/2023 21:34:20] "GET /static/js/index.js HTTP/1.1" 200 -
+197.210.79.21 - - [04/Jul/2023 21:34:40] "GET /static/js/dynamic.js HTTP/1.1" 200 -
+197.210.85.102 - - [04/Jul/2023 21:34:47] "GET /static/js/static.js HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:35:54] "GET / HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:35:54] "GET /static/css/index.css HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 21:35:54] "GET /static/css/loading.css HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 21:35:54] "GET /static/js/index.js HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 21:35:54] "GET /static/js/dynamic.js HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 21:35:54] "GET /static/placeholder.html HTTP/1.1" 304 -
+99.232.129.146 - - [04/Jul/2023 21:35:54] "GET /static/js/static.js HTTP/1.1" 304 -
+Flint Exclusion Zones
+Flint Exclusion Zones
+MAP & HR Facility (> 25mph)
+197.210.85.102 - - [04/Jul/2023 21:36:30] "GET /favicon.ico HTTP/1.1" 404 -
+MAP & HR Facility (> 25mph)
+MAP & HR Facility (> 25mph)
+Flint Facility
+197.210.79.21 - - [04/Jul/2023 21:38:52] "POST /get-users HTTP/1.1" 200 -
+197.210.79.21 - - [04/Jul/2023 21:38:53] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:39:05] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:41:01] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:41:33] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:41:41] "POST /get-users HTTP/1.1" 200 -
+MAP & HR Facility (> 25mph)
+99.232.129.146 - - [04/Jul/2023 21:42:23] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:43:10] "POST /dynamic-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:44:32] "POST /dynamic-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:45:18] "POST /dynamic-plot HTTP/1.1" 200 -
+Michigan
+99.232.129.146 - - [04/Jul/2023 21:46:32] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:46:54] "POST /dynamic-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:50:52] "POST /dynamic-plot HTTP/1.1" 200 -
+FCA SHAP
+99.232.129.146 - - [04/Jul/2023 21:53:01] "POST /get-users HTTP/1.1" 200 -
+Michigan
+99.232.129.146 - - [04/Jul/2023 21:53:16] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:53:35] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:53:35] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:08] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:08] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:12] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:12] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:18] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:19] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:25] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:25] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:29] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:29] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:43] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:54:44] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:55:34] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:55:34] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:56:58] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 21:56:58] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:00:10] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:00:10] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:00:22] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:00:23] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:00:56] "POST /static-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:00:56] "GET /static/static-coordinates.html HTTP/1.1" 200 -
+Michigan
+99.232.129.146 - - [04/Jul/2023 22:02:00] "POST /get-users HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:02:08] "POST /dynamic-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:02:50] "POST /dynamic-plot HTTP/1.1" 200 -
+99.232.129.146 - - [04/Jul/2023 22:03:45] "POST /dynamic-plot HTTP/1.1" 200 -

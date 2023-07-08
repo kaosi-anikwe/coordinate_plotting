@@ -1,32 +1,47 @@
-const getDynamicDeviceID = async () => {
-  let userID = document.getElementById("dynamicUserIDDropdown").value;
-  let response = await fetch(`/get-devices?user_id=${userID}`);
+const getDynamicUserID = async () => {
+  let userDiv = document.getElementById("dynamicUserDiv");
+  userDiv.classList.toggle("running");
+  let plant = document.getElementById("dynamicPlantName").value;
+  let data = { plantName: plant };
+  let response = await fetch("/get-users", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
   if (response.ok) {
     let data = await response.json();
-    const dropdown = document.getElementById("dynamicDeviceIDDropdown");
+    const dropdown = document.getElementById("dynamicUserIDDropdown");
     // remove previous options
     while (dropdown.options.length > 0) {
       dropdown.remove(0);
     }
     // add new device ids
-    for (const device of data.devices) {
+    if (data.users.length > 1) {
       const option = document.createElement("option");
-      option.value = device;
-      option.innerText = device;
+      option.value = "All";
+      option.innerText = "All";
       dropdown.appendChild(option);
     }
+    for (const user of data.users) {
+      const option = document.createElement("option");
+      option.value = user;
+      option.innerText = user;
+      dropdown.appendChild(option);
+    }
+    userDiv.classList.toggle("running");
   } else {
-    showToast("Error getting device IDs");
+    showToast("Error getting Users");
     console.log(response.status);
+    userDiv.classList.toggle("running");
   }
 };
 
 document
-  .getElementById("dynamicUserIDDropdown")
-  .addEventListener("change", getDynamicDeviceID);
+  .getElementById("dynamicPlantName")
+  .addEventListener("change", getDynamicUserID);
 
 window.addEventListener("load", async () => {
-  await getDynamicDeviceID();
+  await getDynamicUserID();
 });
 
 // Dynamic Plot
@@ -68,15 +83,24 @@ const startProcessing = async () => {
     // Get coordinates
     const plantName = document.getElementById("dynamicPlantName").value;
     const userID = document.getElementById("dynamicUserIDDropdown").value;
-    const deviceID = document.getElementById("dynamicDeviceIDDropdown").value;
     const dateFrom = document.getElementById("dynamic_from_date").value;
     const dateTo = document.getElementById("dynamic_to_date").value;
     const speed = document.getElementById("dynamic_speed").value;
 
+    if (userID === "All") {
+      showToast("Please select a different User ID option.");
+      stopProcessing();
+      return;
+    }
+    if (!userID) {
+      showToast("Please select a User ID");
+      stopProcessing();
+      return;
+    }
+
     const data = {
       plantName: plantName,
       userID: userID,
-      deviceID: deviceID,
       fromTime: dateFrom,
       toTime: dateTo,
       speed: speed,
@@ -98,8 +122,8 @@ const startProcessing = async () => {
           const mapContainer = document.getElementById("map-container");
           const mapDiv = document.getElementById("dynamic-map-div");
           const newMapDiv = document.createElement("div");
-          newMapDiv.id = "dynamic-map-div";
           mapDiv.remove();
+          newMapDiv.id = "dynamic-map-div";
           mapContainer.appendChild(newMapDiv);
           // Create new map
           const map = L.map("dynamic-map-div", {
@@ -129,8 +153,8 @@ const startProcessing = async () => {
           // Create markers
           let count = 1;
           let markers = []; // old markers to be removed
-          let bounds = new L.LatLngBounds();
-          let i = 0;
+          let bounds = new L.LatLngBounds(); // bounds for map
+          let i = 0; // intiate counter
           const addCoordinate = () => {
             setTimeout(() => {
               // remove old markers
@@ -143,11 +167,11 @@ const startProcessing = async () => {
               for (let j = 0; j < opacities.length; j++) {
                 let circleMarker = L.circleMarker(coordinates[j], {
                   bubblingMouseEvents: true,
-                  color: "red",
+                  color: data.shade,
                   dashArray: null,
                   dashOffset: null,
                   fill: true,
-                  fillColor: "red",
+                  fillColor: data.shade,
                   fillOpacity: opacities[j],
                   fillRule: "evenodd",
                   lineCap: "round",
@@ -155,7 +179,7 @@ const startProcessing = async () => {
                   opacity: opacities[j],
                   radius: 0.5,
                   stroke: true,
-                  weight: 2,
+                  weight: 10,
                 });
                 newMarkers.push(circleMarker);
               }

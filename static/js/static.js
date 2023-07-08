@@ -1,32 +1,45 @@
-const getDeviceID = async () => {
-  let userID = document.getElementById("userIDDropdown").value;
-  let response = await fetch(`/get-devices?user_id=${userID}`);
+const getUserID = async () => {
+  let userDiv = document.getElementById("userDiv");
+  userDiv.classList.toggle("running");
+  let plant = document.getElementById("plantName").value;
+  let data = { plantName: plant };
+  let response = await fetch("/get-users", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
   if (response.ok) {
     let data = await response.json();
-    const dropdown = document.getElementById("deviceIDDropdown");
+    const dropdown = document.getElementById("userIDDropdown");
     // remove previous options
     while (dropdown.options.length > 0) {
       dropdown.remove(0);
     }
     // add new device ids
-    for (const device of data.devices) {
+    if (data.users.length > 1) {
       const option = document.createElement("option");
-      option.value = device;
-      option.innerText = device;
+      option.value = "All";
+      option.innerText = "All";
       dropdown.appendChild(option);
     }
+    for (const user of data.users) {
+      const option = document.createElement("option");
+      option.value = user;
+      option.innerText = user;
+      dropdown.appendChild(option);
+    }
+    userDiv.classList.toggle("running");
   } else {
-    showToast("Error getting device IDs");
+    showToast("Error getting Users");
     console.log(response.status);
+    userDiv.classList.toggle("running");
   }
 };
 
-document
-  .getElementById("userIDDropdown")
-  .addEventListener("change", getDeviceID);
+document.getElementById("plantName").addEventListener("change", getUserID);
 
 window.addEventListener("load", async () => {
-  await getDeviceID();
+  await getUserID();
 });
 
 // Stiatic Plot
@@ -35,15 +48,19 @@ const staticPlot = async () => {
   spinner.classList.add("running");
   const plantName = document.getElementById("plantName").value;
   const userID = document.getElementById("userIDDropdown").value;
-  const deviceID = document.getElementById("deviceIDDropdown").value;
   const dateFrom = document.getElementById("from_date").value;
   const dateTo = document.getElementById("to_date").value;
   const speed = document.getElementById("speed").value;
 
+  if (!userID) {
+    showToast("Please select a User ID");
+    spinner.classList.remove("running");
+    return;
+  }
+
   const data = {
     plantName: plantName,
     userID: userID,
-    deviceID: deviceID,
     fromTime: dateFrom,
     toTime: dateTo,
     speed: speed,

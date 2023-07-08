@@ -110,32 +110,19 @@
                 <div class="form-group">
                   <label for="dynamicPlantName">Select Plant Name:</label>
                   <select class="form-select font-size" id="dynamicPlantName">
-                    <option value="None">None</option>
-                    <option value="All">All</option>
                     {% for name in plant_names %}
                     <option value="{{ name }}">{{ name }}</option>
                     {% endfor %}
                   </select>
                 </div>
-                <div class="form-group">
+                <div id="dynamicUserDiv" class="form-group ld-over">
+                  <div class="ld ld-ring ld-spin"></div>
                   <label for="dynamicUserIDDropdown">Select User ID:</label>
                   <select
                     class="form-select font-size"
                     id="dynamicUserIDDropdown"
                   >
-                    {% for id in user_ids %}
-                    <option value="{{ id }}">{{ id }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="dynamicDeviceIDDropdown">Select Device ID:</label>
-                  <select
-                    class="form-select font-size"
-                    id="dynamicDeviceIDDropdown"
-                  >
-                    <option value="">Select User ID</option>
+                    <option value="All">All</option>
                   </select>
                 </div>
 
@@ -164,6 +151,7 @@
                 <div class="form-group">
                   <label for="dynamic_speed">Speed Ratio:</label>
                   <select class="form-select font-size" id="dynamic_speed">
+                    <option value="1.0">1.0</option>
                     <option value="1.2">1.2</option>
                     <option value="1.4">1.4</option>
                     <option value="1.6">1.6</option>
@@ -202,7 +190,7 @@
                 <div id="map-div">
                   <iframe
                     id="map"
-                    src="{{ url_for('static', filename='placeholder.html', _external=True, _scheme='https') }}"
+                    src="{{ url_for('static', filename='placeholder.html', _external=True, _scheme='http') }}"
                     frameborder="0"
                   ></iframe>
                 </div>
@@ -212,26 +200,16 @@
                 <div class="form-group">
                   <label for="plantName">Select Plant Name:</label>
                   <select class="form-select font-size" id="plantName">
-                    <option value="None">None</option>
-                    <option value="All">All</option>
                     {% for name in plant_names %}
                     <option value="{{ name }}">{{ name }}</option>
                     {% endfor %}
                   </select>
                 </div>
-                <div class="form-group">
+                <div id="userDiv" class="form-group ld-over">
+                  <div class="ld ld-ring ld-spin"></div>
                   <label for="userIDDropdown">Select User ID:</label>
                   <select class="form-select font-size" id="userIDDropdown">
-                    {% for id in user_ids %}
-                    <option value="{{ id }}">{{ id }}</option>
-                    {% endfor %}
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="deviceIDDropdown">Select Device ID:</label>
-                  <select class="form-select font-size" id="deviceIDDropdown">
-                    <option value="">Select User ID</option>
+                    <option value="All">All</option>
                   </select>
                 </div>
 
@@ -259,6 +237,7 @@
                 <div class="form-group">
                   <label for="speed">Speed Ratio:</label>
                   <select class="form-select font-size" id="speed">
+                    <option value="1.0">1.0</option>
                     <option value="1.2">1.2</option>
                     <option value="1.4">1.4</option>
                     <option value="1.6">1.6</option>
