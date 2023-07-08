@@ -1,5 +1,7 @@
 import json
 from shapely import Point, Polygon
+from shapely.geometry import shape
+from shapely.affinity import scale
 
 # local imports
 from . import cdata, pdata
@@ -8,12 +10,12 @@ from .models import Users
 
 def coordinate_in_area(coordinate, geojson):
     point = Point(coordinate[0], coordinate[1])
-
-    for feature in geojson["features"]:
-        if feature["geometry"]["type"] == "Polygon":
-            polygon = Polygon(feature["geometry"]["coordinates"][0])
-            if polygon.contains(point):
-                return True
+    
+    geojson_coordinates = geojson['features'][0]['geometry']
+    original_polygon = shape(geojson_coordinates)
+    scaled_polygon = scale(original_polygon, 10, 10)
+    if scaled_polygon.contains(point):
+        return True
 
     return False
 

@@ -8,7 +8,8 @@ import pandas as pd
 from datetime import datetime
 from dotenv import load_dotenv
 from shapely.geometry import Point, Polygon, shape, mapping
-from flask import Blueprint, render_template, jsonify, request, url_for, json
+from shapely.affinity import scale
+from flask import Blueprint, render_template, jsonify, request, url_for, json, current_app
 
 # local imports
 from .functions import coordinate_in_area, deeper_blue
@@ -108,7 +109,7 @@ def static_plot():
                 folium.CircleMarker(
                     location=[coordinate[0], coordinate[1]],
                     radius=0.1,
-                    weight=10,
+                    weight=5,
                     color=shade,
                     fill=True,
                     fill_color=shade,
@@ -119,13 +120,18 @@ def static_plot():
             if len(filtered_cdata):
                 row = filtered_cdata["geojson"]
                 geojson = json.loads(row[row.keys()[0]])
-                folium.GeoJson(geojson, name=plant_name).add_to(m)
+                # scale plant
+                geojson_coordinates = geojson['features'][0]['geometry']
+                original_polygon = shape(geojson_coordinates)
+                original_polygon = scale(original_polygon, 10, 10)
+                scaled_coordinates = mapping(original_polygon.buffer(0.05).exterior)
+                folium.GeoJson({"type": "Polygon", "coordinates": [scaled_coordinates['coordinates']]}).add_to(m)
 
             # auto adjust zoom
             m.fit_bounds(m.get_bounds())
 
             # Save map
-            m.save("./static/static-coordinates.html")
+            m.save(f"{current_app.static_folder}/static-coordinates.html")
 
             return jsonify(
                 {
@@ -194,7 +200,14 @@ def dynamic_plot():
             if len(filtered_cdata):
                 # get geojson
                 row = filtered_cdata["geojson"]
-                geojson.append(json.loads(row[row.keys()[0]]))
+                data = json.loads(row[row.keys()[0]])
+                # scale plant
+                geojson_coordinates = data['features'][0]['geometry']
+                original_polygon = shape(geojson_coordinates)
+                original_polygon = scale(original_polygon, 10, 10)
+                scaled_coordinates = mapping(original_polygon.buffer(0.05).exterior)
+                scaled_geojson = {"type": "Polygon", "coordinates": [scaled_coordinates['coordinates']]}
+                geojson.append(scaled_geojson)
             return jsonify(
                 {
                     "success": True,
