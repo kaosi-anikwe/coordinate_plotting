@@ -37,7 +37,6 @@ content = response["Body"]
 pdata = pd.read_parquet(io.BytesIO(content.read()))
 
 
-
 def coordinate_in_area(coordinate, geojson):
     point = Point(coordinate[0], coordinate[1])
 
@@ -71,7 +70,6 @@ def deeper_blue(num_shades, starting_hex="#0066FF"):
     return hexcodes
 
 
-
 # get all user ids
 user_ids = list(set(pdata["user_id"]))
 user_ids = [id_ for id_ in user_ids if id_]
@@ -93,14 +91,14 @@ for id_ in user_ids:
         for name in plant_names:
             plant_row = cdata[(cdata["name"] == name)]
             data = plant_row["geojson"]
-            geojson = json.loads(data[data.keys()[0]]) 
+            geojson = json.loads(data[data.keys()[0]])
             if coordinate_in_area(coordinate, geojson):
                 if name not in USERS:
                     print(f"Found new user in: {name}")
                     USERS[name] = [id_]
                 elif name in USERS:
                     USERS[name].append(id_)
-            
+
 
 @app.get("/")
 def index():
