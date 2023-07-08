@@ -15,6 +15,7 @@ const getDynamicUserID = async () => {
     while (dropdown.options.length > 0) {
       dropdown.remove(0);
     }
+    console.log(`Got ${data.users.length} users`);
     // add new device ids
     if (data.users.length > 1) {
       const option = document.createElement("option");
@@ -28,6 +29,7 @@ const getDynamicUserID = async () => {
       option.innerText = user;
       dropdown.appendChild(option);
     }
+    console.log("Done creating options");
     userDiv.classList.toggle("running");
   } else {
     showToast("Error getting Users");

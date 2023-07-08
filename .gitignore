@@ -4,3 +4,4 @@ env
 __pycache__
 venv
 .env
+app/static/static-coordinates.html
