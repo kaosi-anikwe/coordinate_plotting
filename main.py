@@ -95,8 +95,8 @@ for id_ in user_ids:
             data = plant_row["geojson"]
             geojson = json.loads(data[data.keys()[0]]) 
             if coordinate_in_area(coordinate, geojson):
-                print(f"Found new user in: {name}")
                 if name not in USERS:
+                    print(f"Found new user in: {name}")
                     USERS[name] = [id_]
                 elif name in USERS:
                     USERS[name].append(id_)
